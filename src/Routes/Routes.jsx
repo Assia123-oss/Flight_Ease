@@ -9,6 +9,7 @@ import Security from "../Components/Security"
 import Billing from "../Components/Billing";
 import Plans from "../Components/Plans";
 import Shopping from "../Components/Shopping";
+import Personal from "../Components/Personal";
 
 
 export const router = createBrowserRouter([
@@ -33,23 +34,23 @@ export const router = createBrowserRouter([
         element: <Settings />,
         children:[
          {
-          path:"/user",
-          element: <Settings />,
+          path:"person",
+          element: <Personal />,
          },
          {
-          path: "/security",
+          path: "security",
           element: <Security />,
          },
          {
-          path:"/billing-tax",
+          path:"billing-tax",
           element:<Billing />,
          },
          {
-          path:"/plans",
+          path:"plans",
           element: <Plans />,
          },
          {
-          path:"/shop",
+          path:"shop",
           element: <Shopping />,
          }
         ]

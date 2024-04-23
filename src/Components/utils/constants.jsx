@@ -5,7 +5,7 @@ import { HiOutlineDocumentText } from "react-icons/hi";
 import { GiShoppingCart } from "react-icons/gi";
 
 export const navLinks = [
-  { icon: <FaUser />, text: "Personal Information", href: "/user" },
+  { icon: <FaUser />, text: "Personal Information", href: "/person" },
   { icon: <FiShield />, text: "Security", href: "/security" },
   { icon: <IoCashOutline />, text: "Billing & Tax", href: "/billing-tax" },
   { icon: <HiOutlineDocumentText />, text: "Plans", href: "/plans" },
