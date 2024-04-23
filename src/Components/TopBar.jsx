@@ -37,7 +37,7 @@ const TopBar = () => {
             </p>
           </div>
           <div className="w-[43px] h-[43px] rounded-full overflow-hidden">
-            <img src="/mark.svg" alt="user" className="w-full h-full" />
+            <img src="/collins.svg" alt="user" className="w-full h-full" />
           </div>
         </div>
       </div>
