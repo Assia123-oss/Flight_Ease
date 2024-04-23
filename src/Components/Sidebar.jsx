@@ -23,7 +23,7 @@ const Sidebar = () => {
       <div>
         <img src="/logo.svg" alt="logo" />
       </div>
-      <ul className="py-8">
+      <ul className="py-8 font-medium">
         <li>
           <NavLink
             to="/"

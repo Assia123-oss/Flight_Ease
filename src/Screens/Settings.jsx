@@ -33,11 +33,11 @@ const Settings = () => {
               {navLinks.map((link, index) => (
                 <NavLink
                   key={index}
-                  to="#"
+                  to={link?.href}
                   className={
                     isActive === index
-                      ? "flex gap-4 items-center py-[22px] h-12 font-semibold bg-[#4f80e110] rounded-md text-[#0240BC] px-5"
-                      : "flex gap-4 items-center py-[22px] px-5"
+                      ? "flex gap-4 items-center py-[22px] h-12 font-medium bg-[#4f80e110] rounded-md text-[#0240BC] px-5"
+                      : "flex gap-4 items-center py-[22px] h-12 font-medium px-5"
                   }
                   onClick={() => toggleIsActive(index)}
                 >
