@@ -5,9 +5,13 @@ import { HiOutlineDocumentText } from "react-icons/hi";
 import { GiShoppingCart } from "react-icons/gi";
 
 export const navLinks = [
-  { icon: <FaUser />, text: "Personal Information", href: "/person" },
-  { icon: <FiShield />, text: "Security", href: "/security" },
-  { icon: <IoCashOutline />, text: "Billing & Tax", href: "/billing-tax" },
-  { icon: <HiOutlineDocumentText />, text: "Plans", href: "/plans" },
-  { icon: <GiShoppingCart />, text: "Linked Shops", href: "/shop" },
+  { icon: <FaUser />, text: "Personal Information", href: "/settings/person" },
+  { icon: <FiShield />, text: "Security", href: "/settings/security" },
+  {
+    icon: <IoCashOutline />,
+    text: "Billing & Tax",
+    href: "/settings/billing-tax",
+  },
+  { icon: <HiOutlineDocumentText />, text: "Plans", href: "/settings/plans" },
+  { icon: <GiShoppingCart />, text: "Linked Shops", href: "/settings/shop" },
 ];

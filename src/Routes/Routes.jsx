@@ -26,11 +26,11 @@ export const router = createBrowserRouter([
         element: <Customers />,
       },
       {
-        path: "/Orders",
+        path: "orders",
         element: <Orders />,
       },
       {
-        path: "/Settings",
+        path: "/settings",
         element: <Settings />,
         children:[
          {
