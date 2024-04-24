@@ -51,6 +51,9 @@ export const cardsData = [
     button: {
       text: "Start deploying",
       action: "/start-deploying",
+      color: "#008951",
+      borderColor: "#008951",
+      backgroundColor: "white",
     },
   },
   {
@@ -94,6 +97,9 @@ export const cardsData = [
     button: {
       text: "Start a free trial",
       action: "/start-free-trial",
+      color: "white",
+      borderColor: "#FF5053",
+      backgroundColor: "#FF5053",
     },
   },
   {
@@ -138,10 +144,16 @@ export const cardsData = [
       {
         text: "Contact Sales",
         action: "/contact-sales",
+        color: "white",
+        borderColor: "#9A4CFA",
+        backgroundColor: "#9A4CFA",
       },
       {
         text: "Request Trial",
         action: "/request-trial",
+        color: "#9A4CFA",
+        borderColor: "9A4CFA",
+        backgroundColor:"white"
       },
     ],
   },

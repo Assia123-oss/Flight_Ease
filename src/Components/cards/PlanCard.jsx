@@ -17,7 +17,14 @@ const PlanCard = ({ title, price, info, features, button, buttons }) => {
         </div>
       </div>
       {button && (
-        <button className="absolute bottom-1 w-[190px] ml-3.5 bg-teritiary border-2 text-black py-2 rounded-md">
+        <button
+          className="absolute bottom-1 w-[190px] ml-3.5 border-2 py-2 rounded-md"
+          style={{
+            color: button.color,
+            borderColor: button.borderColor,
+            backgroundColor: button.backgroundColor
+          }}
+        >
           {button.text}
         </button>
       )}
@@ -27,7 +34,12 @@ const PlanCard = ({ title, price, info, features, button, buttons }) => {
           {buttons.map((btn, idx) => (
             <button
               key={idx}
-              className=" bg-primary border-2 w-[99px] py-2 text-black  rounded-md"
+              className="border-2 w-[99px] py-2 rounded-md"
+              style={{
+                color: btn.color,
+                borderColor: btn.borderColor,
+                backgroundColor: btn.backgroundColor,
+              }}
             >
               <p className="text-xs">{btn.text}</p>
             </button>
