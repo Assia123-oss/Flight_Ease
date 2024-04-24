@@ -26,15 +26,15 @@ const Settings = () => {
         </span>
       </div>
       {/* general information */}
-      <div className="bg-primary rounded-xl py-16 px-12">
-        <div className="flex">
-          <div className="w-1/4 border-r-2 border-secondary flex justify-end items-start">
+      <div className="bg-primary rounded-xl py-16 px-10">
+        <div className="flex space-x-10">
+          <div className="w-1/4">
             <ul className="flex flex-col gap-y-5">
               {navLinks.map((link, index) => (
                 <NavLink
                   key={index}
                   to={link?.href}
-                  className={`flex space-x-4 items-center py-[22px] h-12 font-medium px-5 ${
+                  className={`flex space-x-4 items-center py-[22px] h-12 font-medium text-sm px-5 ${
                     isActive === index
                       ? " bg-[#4f80e110] text-[#0240BC] rounded-md"
                       : ""
@@ -47,6 +47,7 @@ const Settings = () => {
               ))}
             </ul>
           </div>
+          <div className="border border-[#EFEFEF]"></div>
           <div className="w-3/4 px-2">
             <Outlet />
           </div>

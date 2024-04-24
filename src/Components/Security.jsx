@@ -11,7 +11,7 @@ const Security = () => {
   return (
     <div className="flex flex-col">
       {/* Heading */}
-      <div className="flex flex-col border-b-2 border-secondary">
+      <div className="flex flex-col border-b-2 border-[#EFEFEF]">
         <h1 className="font-semibold mb-3 text-2xl">Security</h1>
         <p className="mb-2 text-[#0000005f] text-sm">
           Lorem ipsum dolor sit amet consectetur.

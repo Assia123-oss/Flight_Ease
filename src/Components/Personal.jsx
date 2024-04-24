@@ -5,7 +5,7 @@ const Personal = () => {
   return (
     <div>
       {/* Introduction part */}
-      <div className="flex flex-col border-b-2 border-secondary">
+      <div className="flex flex-col border-b-2 border-[#EFEFEF]">
         <h1 className="font-semibold mb-3">General Information</h1>
         <p className="mb-2">Lorem ipsum dolor sit amet consectetur.</p>
       </div>

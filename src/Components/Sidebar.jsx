@@ -19,7 +19,7 @@ const Sidebar = () => {
   const [showDropdown, setShowDropdown] = useState(false);
 
   return (
-    <div className="w-[325px] bg-primary border-r border-r-gray p-7">
+    <div className="w-[320px] bg-primary border-r-2 border-r-[#EFEFEF] p-7">
       <div>
         <img src="/logo.svg" alt="logo" />
       </div>
@@ -50,7 +50,10 @@ const Sidebar = () => {
             </NavLink>
             {showDropdown && (
               <div className="absolute px-3 mt-2 text-[#757575]">
-                <NavLink to="#" className="flex items-center gap-3 py-2">
+                <NavLink
+                  to="#"
+                  className="flex items-center gap-3 py-2 text-sm"
+                >
                   <RiTicketLine /> Open Tickets
                   <div className="flex items-center ml-auto">
                     <span
@@ -61,7 +64,10 @@ const Sidebar = () => {
                     </span>
                   </div>
                 </NavLink>
-                <NavLink to="#" className="flex items-center gap-3 py-2">
+                <NavLink
+                  to="#"
+                  className="flex items-center gap-3 py-2 text-sm"
+                >
                   <RiShoppingBasketLine /> Tickets with Orders
                   <div className="flex items-center ml-auto">
                     <span
@@ -72,7 +78,10 @@ const Sidebar = () => {
                     </span>
                   </div>
                 </NavLink>
-                <NavLink to="#" className="flex items-center gap-3 py-2">
+                <NavLink
+                  to="#"
+                  className="flex items-center gap-3 py-2 text-sm"
+                >
                   <RiFileList2Line /> Closed Tickets
                   <div className="flex items-center ml-auto">
                     <span
@@ -101,7 +110,7 @@ const Sidebar = () => {
             </NavLink>
             {showDropdown && (
               <div className="absolute px-4 mt-3 text-[#757575]">
-                <NavLink className="flex items-center gap-3">
+                <NavLink className="flex items-center gap-3 text-sm">
                   <AiOutlinePlus />
                   Create a Chatbot
                 </NavLink>
