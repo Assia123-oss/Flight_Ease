@@ -4,7 +4,7 @@ import PlanCard from './cards/PlanCard';
 
 const Plans = () => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col ">
       {/* Upper */}
       <div className="flex flex-col border-b-2 border-secondary">
         <h1 className="font-semibold mb-3 text-2xl">Plans</h1>
@@ -30,7 +30,7 @@ const Plans = () => {
         </div>
       </div>
       {/* Lower */}
-      <div className="mt-16 gap-5 flex">
+      <div className="mt-16 gap-2 flex flex-row border-2 border-red-500">
         {cardsData.map((data, idx) => (
           <PlanCard {...data} key={idx} />
         ))}

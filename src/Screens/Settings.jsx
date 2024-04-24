@@ -26,28 +26,29 @@ const Settings = () => {
         </span>
       </div>
       {/* general information */}
-      <div className="bg-primary rounded-xl p-10">
+      <div className="bg-primary rounded-xl py-16 px-12">
         <div className="flex">
-          <div className=" px-4 w-1/3 border-r-2 border-secondary">
-            <ul className="flex flex-col">
+          <div className="w-1/4 border-r-2 border-secondary flex justify-end items-start">
+            <ul className="flex flex-col gap-y-5">
               {navLinks.map((link, index) => (
                 <NavLink
                   key={index}
                   to={link?.href}
-                  className={
+                  className={`flex space-x-4 items-center py-[22px] h-12 font-medium px-5 ${
                     isActive === index
-                      ? "flex gap-4 items-center py-[22px] h-12 font-medium bg-[#4f80e110] rounded-md text-[#0240BC] px-5"
-                      : "flex gap-4 items-center py-[22px] h-12 font-medium px-5"
-                  }
+                      ? " bg-[#4f80e110] text-[#0240BC] rounded-md"
+                      : ""
+                  }`}
                   onClick={() => toggleIsActive(index)}
                 >
-                  {link.icon} {link.text}
+                  <p>{link.icon}</p>
+                  <p className="text-base whitespace-nowrap">{link.text}</p>
                 </NavLink>
               ))}
             </ul>
           </div>
-          <div className="w-2/3 px-8">
-           <Outlet />
+          <div className="w-3/4 px-2">
+            <Outlet />
           </div>
         </div>
       </div>
