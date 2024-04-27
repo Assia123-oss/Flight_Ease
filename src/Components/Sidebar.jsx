@@ -9,11 +9,11 @@ import {
   RiShoppingCartLine,
   RiUserLine,
   RiSettingsLine,
-  RiLogoutCircleLine,
 } from "react-icons/ri";
 import { AiOutlinePlus } from "react-icons/ai";
 import { MdDoneAll } from "react-icons/md";
-import { FaChevronDown } from "react-icons/fa";
+import { FaArrowLeft, FaChevronDown } from "react-icons/fa";
+import { FaArrowRightFromBracket,FaCableCar } from "react-icons/fa6";
 
 const Sidebar = () => {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -120,7 +120,7 @@ const Sidebar = () => {
         </li>
         <li className={showDropdown ? "mt-12" : ""}>
           <NavLink
-            to="/Orders"
+            to="/orders"
             className={({ isActive }) =>
               isActive
                 ? "py-3 px-2 flex items-center gap-3 bg-teritiary rounded-md text-white"
@@ -157,7 +157,18 @@ const Sidebar = () => {
         </li>
         <li>
           <NavLink to="#" className="py-3 px-2 flex items-center gap-3">
-            <RiLogoutCircleLine className="text-[16px]" /> Log out
+            <FaArrowRightFromBracket className="text-[16px]" /> Log out
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/register" className="py-3 px-2 flex items-center gap-3">
+            <FaArrowLeft className="text-[16px]" /> Sign up
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/login" className="py-3 px-2 flex items-center gap-3">
+            <FaCableCar className="text-[16px]" />
+            Log in
           </NavLink>
         </li>
       </ul>

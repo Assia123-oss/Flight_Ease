@@ -10,6 +10,8 @@ import Billing from "../Components/Billing";
 import Plans from "../Components/Plans";
 import Shopping from "../Components/Shopping";
 import Personal from "../Components/Personal";
+import Register from "../Screens/Register";
+import Login from "../Screens/Login"
 
 
 export const router = createBrowserRouter([
@@ -26,8 +28,16 @@ export const router = createBrowserRouter([
         element: <Customers />,
       },
       {
-        path: "orders",
+        path: "/orders",
         element: <Orders />,
+      },
+      {
+       path:"/register",
+       element:<Register />
+      },
+      {
+       path:"/login",
+       element:<Login />,
       },
       {
         path: "/settings",
