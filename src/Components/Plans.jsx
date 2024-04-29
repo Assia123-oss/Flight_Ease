@@ -30,7 +30,7 @@ const Plans = () => {
         </div>
       </div>
       {/* Lower */}
-      <div className="mt-16 gap-2 flex">
+      <div className="mt-16 gap-2 flex border border-red-400 overflow-x-auto">
         {cardsData.map((data, idx) => (
           <PlanCard {...data} key={idx} />
         ))}

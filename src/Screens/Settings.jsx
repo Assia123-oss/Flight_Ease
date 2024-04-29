@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import Button from "../Components/shared/Button";
 import { NavLink, Outlet } from "react-router-dom";
 import { navLinks } from "../Components/utils/constants";
+import Personal from "../Components/Personal";
 
 const Settings = () => {
-  const [isActive, setIsActive] = useState(null);
+  const [isActive, setIsActive] = useState(0);
 
   const toggleIsActive = (index) => {
     setIsActive(index);
@@ -49,6 +50,7 @@ const Settings = () => {
           </div>
           <div className="border border-[#EFEFEF]"></div>
           <div className="w-3/4 px-2">
+            {isActive === 0 && <Personal />}
             <Outlet />
           </div>
         </div>

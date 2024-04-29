@@ -11,12 +11,22 @@ import {
   RiSettingsLine,
 } from "react-icons/ri";
 import { AiOutlinePlus } from "react-icons/ai";
-import { MdDoneAll } from "react-icons/md";
 import { FaArrowLeft, FaChevronDown } from "react-icons/fa";
-import { FaArrowRightFromBracket,FaCableCar } from "react-icons/fa6";
+import { FaArrowRightFromBracket, FaCableCar } from "react-icons/fa6";
+import { FaFileArchive } from "react-icons/fa";
 
 const Sidebar = () => {
-  const [showDropdown, setShowDropdown] = useState(false);
+  const [showDropdown, setShowDropdown] = useState({
+    ticket: false,
+    chatbot: false,
+  });
+
+  const toggleDropdown = (dropdown) => {
+    setShowDropdown({
+      ...showDropdown,
+      [dropdown]: !showDropdown[dropdown],
+    });
+  };
 
   return (
     <div className="w-[320px] bg-primary border-r-2 border-r-[#EFEFEF] p-7">
@@ -41,14 +51,14 @@ const Sidebar = () => {
             <NavLink
               to="#"
               className="py-3 px-2 flex items-center justify-between"
-              onClick={() => setShowDropdown(!showDropdown)}
+              onClick={() => toggleDropdown("ticket")}
             >
               <span className="flex items-center gap-3">
-                <MdDoneAll className="text-[16px]" /> All Tickets
+                <FaFileArchive className="text-[16px]" /> All Tickets
               </span>
               <FaChevronDown className="text-xs" />
             </NavLink>
-            {showDropdown && (
+            {showDropdown.ticket && (
               <div className="absolute px-3 mt-2 text-[#757575]">
                 <NavLink
                   to="#"
@@ -96,19 +106,19 @@ const Sidebar = () => {
             )}
           </div>
         </li>
-        <li className={showDropdown ? "mt-[150px]" : ""}>
+        <li className={showDropdown.ticket ? "mt-[150px]" : ""}>
           <div className="relative">
             <NavLink
               to=""
               className="py-3 px-2 flex items-center justify-between"
-              onClick={() => setShowDropdown(!showDropdown)}
+              onClick={() => toggleDropdown("chatbot")}
             >
               <span className="flex items-center gap-3">
                 <RiChat1Line className="text-[16px]" /> Chatbots
               </span>
               <FaChevronDown className="text-xs" />
             </NavLink>
-            {showDropdown && (
+            {showDropdown.chatbot && (
               <div className="absolute px-4 mt-3 text-[#757575]">
                 <NavLink className="flex items-center gap-3 text-sm">
                   <AiOutlinePlus />
@@ -118,7 +128,7 @@ const Sidebar = () => {
             )}
           </div>
         </li>
-        <li className={showDropdown ? "mt-12" : ""}>
+        <li className={showDropdown.chatbot ? "mt-12" : ""}>
           <NavLink
             to="/orders"
             className={({ isActive }) =>

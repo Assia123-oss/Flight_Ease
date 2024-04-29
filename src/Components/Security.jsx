@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import Button from "./shared/Button";
 
 const Security = () => {
-  const [isDivClicked, setIsDivClicked] = useState(false);
+  const [isDivClicked, setIsDivClicked] = useState([false, false, false]);
 
-  const handleDivClick = () => {
-    setIsDivClicked(!isDivClicked);
+  const handleDivClick = (index) => {
+    const updatedClick = [...isDivClicked];
+    updatedClick[index] = !updatedClick[index];
+    setIsDivClicked(updatedClick);
   };
 
   return (
@@ -24,84 +26,38 @@ const Security = () => {
       <div className="flex flex-col mt-12">
         {/* Body */}
         <div className="flex flex-col">
-          <div className="flex justify-between py-3">
-            <div className="flex flex-col">
-              <h1 className="font-medium mb-2 text-1xl">
-                Login Two-Step Verification
-              </h1>
-              <p className="mb-2 text-[#0000005f] text-sm">
-                Lorem ipsum dolor sit amet consectetur.
-              </p>
-            </div>
-            <div>
-              <div
-                className={`${
-                  isDivClicked
-                    ? "bg-teritiary border-teritiary"
-                    : "bg-[#C0C7D0] border-[#C0C7D0]"
-                } border-2 w-14 h-6 rounded-full flex items-center`}
-                onClick={handleDivClick}
-              >
-                <div
-                  className={`w-5 h-[18px] rounded-full border-2 border-[#ffffff] bg-[#ffffff] ${
-                    isDivClicked ? "ml-auto" : ""
-                  }`}
-                ></div>
+          {[0, 1, 2].map(
+            (
+              index // Using map to generate JSX elements
+            ) => (
+              <div className="flex justify-between py-3" key={index}>
+                <div className="flex flex-col">
+                  <h1 className="font-medium mb-2 text-1xl">
+                    Login Two-Step Verification
+                  </h1>
+                  <p className="mb-2 text-[#0000005f] text-sm">
+                    Lorem ipsum dolor sit amet consectetur.
+                  </p>
+                </div>
+                <div>
+                  <div
+                    className={`${
+                      isDivClicked[index]
+                        ? "bg-teritiary border-teritiary"
+                        : "bg-[#C0C7D0] border-[#C0C7D0]"
+                    } border-2 w-14 h-6 rounded-full flex items-center`}
+                    onClick={() => handleDivClick(index)}
+                  >
+                    <div
+                      className={`w-5 h-[18px] rounded-full border-2 border-[#ffffff] bg-[#ffffff] ${
+                        isDivClicked[index] ? "ml-auto" : ""
+                      }`}
+                    ></div>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div className="flex justify-between py-3">
-            <div className="flex flex-col">
-              <h1 className="font-medium mb-2 text-1xl">
-                Login Two-Step Verification
-              </h1>
-              <p className="mb-2 text-[#0000005f] text-sm">
-                Lorem ipsum dolor sit amet consectetur.
-              </p>
-            </div>
-            <div>
-              <div
-                className={`${
-                  isDivClicked
-                    ? "bg-teritiary border-teritiary"
-                    : "bg-[#C0C7D0] border-[#C0C7D0]"
-                } border-2 w-14 h-6 rounded-full flex items-center`}
-                onClick={handleDivClick}
-              >
-                <div
-                  className={`w-5 h-[18px] rounded-full border-2 border-[#ffffff] bg-[#ffffff] ${
-                    isDivClicked ? "ml-auto" : ""
-                  }`}
-                ></div>
-              </div>
-            </div>
-          </div>
-          <div className="flex justify-between py-3">
-            <div className="flex flex-col">
-              <h1 className="font-medium mb-2 text-1xl">
-                Login Two-Step Verification
-              </h1>
-              <p className="mb-2 text-[#0000005f] text-sm">
-                Lorem ipsum dolor sit amet consectetur.
-              </p>
-            </div>
-            <div>
-              <div
-                className={`${
-                  isDivClicked
-                    ? "bg-teritiary border-teritiary"
-                    : "bg-[#C0C7D0] border-[#C0C7D0]"
-                } border-2 w-14 h-6 rounded-full flex items-center`}
-                onClick={handleDivClick}
-              >
-                <div
-                  className={`w-5 h-[18px] rounded-full border-2 border-[#ffffff] bg-[#ffffff] ${
-                    isDivClicked ? "ml-auto" : ""
-                  }`}
-                ></div>
-              </div>
-            </div>
-          </div>
+            )
+          )}
         </div>
       </div>
       <div className="border-b w-[200px] mt-12 flex items-center justify-start">
