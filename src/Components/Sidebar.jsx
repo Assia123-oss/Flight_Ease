@@ -170,17 +170,6 @@ const Sidebar = () => {
             <FaArrowRightFromBracket className="text-[16px]" /> Log out
           </NavLink>
         </li>
-        <li>
-          <NavLink to="/register" className="py-3 px-2 flex items-center gap-3">
-            <FaArrowLeft className="text-[16px]" /> Sign up
-          </NavLink>
-        </li>
-        <li>
-          <NavLink to="/login" className="py-3 px-2 flex items-center gap-3">
-            <FaCableCar className="text-[16px]" />
-            Log in
-          </NavLink>
-        </li>
       </ul>
     </div>
   );

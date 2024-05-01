@@ -1,14 +1,14 @@
-import React, { useState } from 'react'
-import { FaCheck } from 'react-icons/fa';
-import Button from '../Components/shared/Button';
-import { NavLink } from 'react-router-dom';
+import React, { useState } from "react";
+import { FaCheck } from "react-icons/fa";
+import Button from "./shared/Button";
+import { Link, NavLink } from "react-router-dom";
 
 const Register = () => {
-  const [isClicked,setIsClicked] = useState(false);
+  const [isClicked, setIsClicked] = useState(false);
 
   const handleClick = () => {
     setIsClicked(!isClicked);
-  }
+  };
   return (
     <div className="flex">
       <div style={{ flex: 1 }}>
@@ -54,7 +54,10 @@ const Register = () => {
               onClick={handleClick}
             >
               <FaCheck
-                className={`${isClicked ? "text-primary" : "text-[#549FF6]"} text-md`} onClick={handleClick}
+                className={`${
+                  isClicked ? "text-primary" : "text-[#549FF6]"
+                } text-md`}
+                onClick={handleClick}
               />
             </div>
             <p className="text-[#818181] flex items-center">
@@ -68,7 +71,9 @@ const Register = () => {
         </div>
         <p className="flex gap-4 text-[#818181] mb-7">
           Already a member?
-          <NavLink to="/login" className="text-[#549FF6] font-medium">Login</NavLink>
+          <Link to={"/auth/login"} className="text-[#549FF6] font-medium">
+            Login
+          </Link>
         </p>
         <div className="flex mb-10 items-center gap-2 justify-center">
           <div className="border-b w-[130px] border-[#bebebe]"></div>
@@ -100,6 +105,6 @@ const Register = () => {
       </div>
     </div>
   );
-}
+};
 
-export default Register
+export default Register;

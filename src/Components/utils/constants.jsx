@@ -1,4 +1,4 @@
-import { FaUser } from "react-icons/fa";
+import { FaChevronUp, FaUser } from "react-icons/fa";
 import { FiShield } from "react-icons/fi";
 import { IoCashOutline } from "react-icons/io5";
 import { HiOutlineDocumentText } from "react-icons/hi";
@@ -6,8 +6,15 @@ import { GiShoppingCart } from "react-icons/gi";
 import { MdDone } from "react-icons/md";
 
 
+import card1 from "/icons/card1.svg"
+import card2 from "/icons/card2.svg";
+import card3 from "/icons/card3.svg";
+import card4 from "/icons/card4.svg";
+
+
+
 export const navLinks = [
-  { icon: <FaUser />, text: "Personal Information", href: "/settings/person" },
+  { icon: <FaUser />, text: "Personal Information", href: "/settings" },
   { icon: <FiShield />, text: "Security", href: "/settings/security" },
   {
     icon: <IoCashOutline />,
@@ -16,6 +23,41 @@ export const navLinks = [
   },
   { icon: <HiOutlineDocumentText />, text: "Plans", href: "/settings/plans" },
   { icon: <GiShoppingCart />, text: "Linked Shops", href: "/settings/shop" },
+];
+
+export const cards = [
+  {
+    title: "Total sales",
+    image: card1,
+    price: "$6,784",
+    number: "10%",
+    icon: <FaChevronUp />,
+    purpose: "+$150 today",
+  },
+  {
+    title: "Orders",
+    image: card2,
+    price: "$1,920",
+    number: "10%",
+    icon: <FaChevronUp />,
+    purpose: "View orders",
+  },
+  {
+    title: "Total Tickets",
+    image: card3,
+    price: "$4,412",
+    number: "10%",
+    icon: <FaChevronUp />,
+    purpose: "In last week",
+  },
+  {
+    title: "Total sales",
+    image: card4,
+    price: "$329",
+    number: "70%",
+    icon: <FaChevronUp />,
+    purpose: "2477 tickets automated",
+  },
 ];
 
 export const cardsData = [

@@ -1,6 +1,6 @@
-import React from 'react'
-import { cardsData } from './utils/constants';
-import PlanCard from './cards/PlanCard';
+import React from "react";
+import { cardsData } from "./utils/constants";
+import PlanCard from "./cards/PlanCard";
 
 const Plans = () => {
   return (
@@ -30,14 +30,13 @@ const Plans = () => {
         </div>
       </div>
       {/* Lower */}
-      <div className="mt-16 gap-2 flex border border-red-400 overflow-x-auto">
+      <div className="mt-16 gap-2 flex overflow-x-auto">
         {cardsData.map((data, idx) => (
           <PlanCard {...data} key={idx} />
         ))}
       </div>
     </div>
   );
-}
+};
 
 export default Plans;
-

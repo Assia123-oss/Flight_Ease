@@ -50,7 +50,7 @@ const Settings = () => {
           </div>
           <div className="border border-[#EFEFEF]"></div>
           <div className="w-3/4 px-2">
-            {isActive === 0 && <Personal />}
+            {/* {isActive === 0 && <Personal />} */}
             <Outlet />
           </div>
         </div>
